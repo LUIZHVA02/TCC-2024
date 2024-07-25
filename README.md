@@ -1,4 +1,4 @@
-# tcc-2024
+# planejamento-tcc-2024
 Este projeto de conclusão de curso:
 
 |Nome do Integrante| Abrangência | Facilidade |
