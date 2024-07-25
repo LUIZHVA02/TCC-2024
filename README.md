@@ -1,7 +1,8 @@
 # tcc-2024
-Este projeto de conclusão de curso é integrado por:
+Este projeto de conclusão de curso:
 
-
+|Integrantes|
+|----|
 | Luan da Silva Oliveira |
 | Luiz Henrique Vidal Araujo |
 | Pedro Henrique de Sousa Barbosa |
