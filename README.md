@@ -3,7 +3,7 @@ Este é um projeto de conclusão do Curso Técnico de Desenvolvimento de Sistema
 
 |Nome do Integrante| Preferências | Facilidades |
 |----|----|----|
-| Luan da Silva Oliveira | Front-End e Back-End | Back-End |
+| Luan da Silva Oliveira | Front-End e Back-End Mobile | Front-End |
 | Luiz Henrique Vidal Araujo | Full Stack | Back-End |
 | Pedro Henrique de Sousa Barbosa | Front-End e Back-End | Front-End |
 | Ryan Alves de Carvalho | Full Stack | Full Stack |
