@@ -10,10 +10,10 @@ interface CharacterService {
 
 
 
-    @GET("/character")
+    @GET("character")
     fun getAllCharacters(): Call<Result>
 
-    @GET("/character/{id}")
+    @GET("character/{id}")
     fun getCharacterById(@Path("id") id: Int): Call<Character>
 
 //    @GET

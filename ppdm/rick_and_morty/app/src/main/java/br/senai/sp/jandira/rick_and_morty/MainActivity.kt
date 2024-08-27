@@ -71,7 +71,6 @@ fun getCharacter(modifier: Modifier = Modifier) {
                     }
 
                     override fun onFailure(p0: Call<Character>, p1: Throwable) {
-                        TODO("Not yet implemented")
                     }
 
                 })
