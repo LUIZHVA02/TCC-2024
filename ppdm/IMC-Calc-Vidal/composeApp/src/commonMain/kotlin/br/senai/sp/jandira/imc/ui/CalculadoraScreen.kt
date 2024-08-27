@@ -123,6 +123,10 @@ fun calculadoraScreen() {
                         text = "Calcular IMC!"
                     )
                 }
+                AnimatedVisibility(showContent) {
+                    val greeting = remember { Geeting().greet }
+
+                }
             }
             Column {
 
