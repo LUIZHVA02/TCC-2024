@@ -10,7 +10,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 import br.senai.sp.jandira.rick_and_morty.model.Character
 import br.senai.sp.jandira.rick_and_morty.service.RetrofitFactory
 import br.senai.sp.jandira.rick_and_morty.ui.theme.Rick_and_MortyTheme
@@ -19,7 +21,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 @Composable
-fun CharacterDetails(modifier: Modifier = Modifier) {
+fun CharacterDetails(character: Character, controleDeNavegacao: NavHostController) {
     var id by remember {
         mutableStateOf("")
     }
@@ -58,6 +60,7 @@ fun CharacterDetails(modifier: Modifier = Modifier) {
         ) {
             Text(text = "Buscar Personagens")
         }
+        Text(text = "ID: ${character.id}")
         Text(text = "Nome: ${character.name}")
         Text(text = "Status: ${character.status}")
         Text(text = "Espécie: ${character.species}")
@@ -70,6 +73,6 @@ fun CharacterDetails(modifier: Modifier = Modifier) {
 @Composable
 fun CharacterDetailsPreview() {
     Rick_and_MortyTheme {
-        CharacterDetails()
+        CharacterDetails(character =  Character(), controleDeNavegacao = NavHostController(LocalContext.current))
     }
 }
