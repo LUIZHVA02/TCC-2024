@@ -21,7 +21,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 @Composable
-fun CharacterDetails(character: Character, controleDeNavegacao: NavHostController) {
+fun CharacterDetails(id: String, controleDeNavegacao: NavHostController) {
+
     var id by remember {
         mutableStateOf("")
     }
@@ -71,8 +72,8 @@ fun CharacterDetails(character: Character, controleDeNavegacao: NavHostControlle
 
 @Preview(showBackground = true)
 @Composable
-fun CharacterDetailsPreview() {
+fun CharacterDetailsPreview() { 
     Rick_and_MortyTheme {
-        CharacterDetails(character =  Character(), controleDeNavegacao = NavHostController(LocalContext.current))
+        CharacterDetails(id = "1", controleDeNavegacao = NavHostController(LocalContext.current))
     }
 }
