@@ -46,14 +46,20 @@ fun CharactersList(controleDeNavegacao: NavHostController) {
     }
 
     val callCharacterList = RetrofitFactory()
-        .getCharacterService().getAllCharacters()
+        .getCharacterService()
+        .getAllCharacters()
 
-    callCharacterList.enqueue(object : Callback<Result>{
-        override fun onResponse(p0: Call<Result>, p1: Response<Result>) {
-            characterList = p1.body()!!.results!!
-        }
+    callCharacterList.enqueue(
+        object : Callback<Result>{
 
-        override fun onFailure(p0: Call<Result>, p1: Throwable) {}
+            override fun onResponse(
+                p0: Call<Result>,
+                p1: Response<Result>) {
+
+                characterList = p1.body()!!.results!!
+            }
+
+            override fun onFailure(p0: Call<Result>, p1: Throwable) {}
     })
 
     Surface (
@@ -112,7 +118,7 @@ fun CharacterCard(character: Character, controleDeNavegacao: NavHostController) 
                     .fillMaxSize()
                     .padding(start = 8.dp)
                     .clickable {
-                        controleDeNavegacao.navigate("DetalhesPersonagem")
+                        controleDeNavegacao.navigate("detalhesPersonagem/${character.id}")
                     }
             ){
                 Column {
